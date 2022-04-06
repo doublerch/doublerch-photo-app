@@ -1,0 +1,59 @@
+.navbar{
+    background-color: white;
+    position: sticky;
+    padding: 3vh;
+}
+
+#app-name{
+    display: flex;
+    justify-content: left;
+}
+
+.navbar-right{
+    display: flex;
+    justify-content: right;
+}
+
+.suggestions{
+    justify-content: flex-end;
+}
+
+#personal{
+    display: flex;
+    justify-content: right;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.suggested-accounts{
+    padding: 3vh;
+}
+
+#suggestion-1{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 3vh;
+}
+
+#suggestion-2{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 3vh;
+}
+#suggestion-3{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 3vh;
+}
+#suggestion-4{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 3vh;
+}
+#suggestion-5{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 3vh;
+}
