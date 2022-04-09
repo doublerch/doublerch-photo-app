@@ -1,26 +1,42 @@
 .navbar{
     background-color: white;
     position: sticky;
+    top: 0;
     padding: 3vh;
 }
 
-#app-name{
+#nav-right{
+    float: right;
+}
+    
+
+/* #app-name{
     display: flex;
     justify-content: left;
-}
+} */
 
-.navbar-right{
+/* .navbar-right{
     display: flex;
     justify-content: right;
+} */
+
+.container *{
+    border:solid 1px black;
+    padding: 3px
 }
 
+/* .container{
+    display: flex;
+} */
+
 .suggestions{
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    float: right;
 }
 
 #personal{
     display: flex;
-    justify-content: right;
+    justify-content: left;
 }
 
 ul{
@@ -56,4 +72,40 @@ ul{
     display: flex;
     justify-content: right;
     padding-bottom: 3vh;
+}
+
+ /* .stories{
+    display: flex;
+    justify-content: center;
+}  */
+.story-list > li{
+    float: left;
+    padding: 2vh;
+}
+
+.story-list > li > img{
+    border-radius: 50%;
+}
+
+
+.stories{
+    display:flex;
+}
+
+.posts{
+    width:66%;
+}
+
+.ellipsis{
+    float: right;
+}
+
+.post-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bookmark{
+    float: right;
 }
