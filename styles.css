@@ -1,98 +1,94 @@
-.navbar{
-    background-color: white;
+/*formatting the Navbar*/
+nav{
+    display:flex;
+    justify-content:space-between;
     position: sticky;
-    top: 0;
-    padding: 3vh;
 }
-
-#nav-right{
-    float: right;
+nav , nav * {
+    border:solid 1px black;
 }
-    
-
-/* #app-name{
-    display: flex;
-    justify-content: left;
-} */
-
-/* .navbar-right{
-    display: flex;
-    justify-content: right;
-} */
+nav h1{
+    margin-left:10px;
+}
+nav ul{
+    list-style-type:none;
+    padding:0px;
+    display:flex;
+}
+nav li{
+    padding: 10px;
+    margin:0;
+}
 
 .container *{
     border:solid 1px black;
     padding: 3px
 }
-
-/* .container{
+.containter{
     display: flex;
-} */
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
 
+/*formating the suggestion box*/
 .suggestions{
     /* justify-content: flex-end; */
     float: right;
 }
-
 #personal{
     display: flex;
     justify-content: left;
+    padding:10px;
 }
-
-ul{
+.suggestions h3{
+    margin:4px;
+}
+.suggestions ul{
     list-style-type: none;
+    margin-top:4px;
 }
-
 .suggested-accounts{
-    padding: 3vh;
+    height: 400px;
+    width: 260px;
+}
+#suggestion{
+    height:18%;
+    width:96%;
+    margin:2px;
+    padding:2px;
+    display: flex;
+    align-items: center;
 }
 
-#suggestion-1{
-    display: flex;
-    justify-content: right;
-    padding-bottom: 3vh;
-}
-
-#suggestion-2{
-    display: flex;
-    justify-content: right;
-    padding-bottom: 3vh;
-}
-#suggestion-3{
-    display: flex;
-    justify-content: right;
-    padding-bottom: 3vh;
-}
-#suggestion-4{
-    display: flex;
-    justify-content: right;
-    padding-bottom: 3vh;
-}
-#suggestion-5{
-    display: flex;
-    justify-content: right;
-    padding-bottom: 3vh;
-}
-
- /* .stories{
-    display: flex;
-    justify-content: center;
-}  */
-.story-list > li{
-    float: left;
-    padding: 2vh;
-}
-
-.story-list > li > img{
-    border-radius: 50%;
-}
-
-
+/*formatting story bar*/
 .stories{
-    display:flex;
+    display: flex;
+    justify-content: flex-start;
+    height:110px;
 }
+.stories ul{
+    list-style-type: none;
+    width:100%;
+    height:100px;
+    margin:2px;
+}
+.stories li{
+    width:75px;
+    height:90px;
+    float: left;
+    padding: 4px;
+    margin:0px 2px;
+}
+.stories img{
+    border-radius: 50%;
+    margin-left:10%;
+}
+
+
 
 .posts{
+    margin-top:10px;
     width:66%;
 }
 

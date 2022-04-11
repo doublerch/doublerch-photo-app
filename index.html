@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<div class="navbar">
-    <span id="app-name">Photo App</span>
-    <span id="nav-right">Username
-        <button type="button">Log Out</button>
-    </span>
-</div>
+
 <body class="container">
+    <nav>
+        <h1>Photo App</h1>
+        <ul>
+            <li>Username</li>
+            <li><a href="#logout">Log Out</a></li>
+        </ul>
+    </nav>
     <div class="suggestions">
         <div id="personal">
             <img src="https://i.picsum.photos/id/570/100/100.jpg?hmac=VEJlDpzGtaEKOeH7vWHGRRiKygz14cXzpiEWWniXfXA">
             <p>Username</p>
         </div>
-        <div>
-            <p>Suggestions for you</p>
-        </div>
+        <h3>Suggestions for you</h3>
         <ul class="suggested-accounts">
-            <li id="suggestion-1">
+            <li id="suggestion">
                 <img src="https://i.picsum.photos/id/988/50/50.jpg?hmac=MmanxbBz-aJ-qojZRnErpw9XGUbvHyJptD_wjJigylI">
                 <span>
                     <div>amandahudson</div>
@@ -30,7 +30,7 @@
                 </span>
                 <span><button type=button>follow</button></span>
             </li>
-            <li id="suggestion-2">
+            <li id="suggestion">
                 <img src="https://i.picsum.photos/id/953/50/50.jpg?hmac=Qvr2U6Q7GwrA5M_a_qKCxs_TVohG9W3ZWQpKRDyTF-o">
                 <span>
                     <div>qthornton</div>
@@ -38,7 +38,7 @@
                 </span>
                 <span><button type=button>follow</button></span>
             </li>
-            <li id="suggestion-3">
+            <li id="suggestion">
                 <img src="https://i.picsum.photos/id/464/50/50.jpg?hmac=DAKq_VDhnxbPQn3P-9FDnxMKrAIGfq1ID-66yTZYEmY">
                 <span>
                     <div>ynelson</div>
@@ -46,7 +46,7 @@
                 </span>
                 <span><button type=button>follow</button></span>
             </li>
-            <li id="suggestion-4">
+            <li id="suggestion">
                 <img src="https://i.picsum.photos/id/487/50/50.jpg?hmac=A5MrcuXTspVlSRnhbmWLfnek4SunmYMJ7QN0Q0SCuCE">
                 <span>
                     <div>lauralyons</div>
@@ -54,7 +54,7 @@
                 </span>
                 <span><button type=button>follow</button></span>
             </li>
-            <li id="suggestion-5">
+            <li id="suggestion">
                 <img src="https://i.picsum.photos/id/260/50/50.jpg?hmac=2ZAzK11vMmRA54BDubcvIqK6WCvYWYu6SalTWDACZ8k">
                 <span>
                     <div>airotciv</div>
@@ -66,7 +66,7 @@
 
     </div>
     <div class="stories">
-        <ul class="story-list">
+        <ul>
             <li>
                 <img src="https://i.picsum.photos/id/988/50/50.jpg?hmac=MmanxbBz-aJ-qojZRnErpw9XGUbvHyJptD_wjJigylI">
                 <div>gouldjennifer</div>
