@@ -1,14 +1,15 @@
 /*formatting the Navbar*/
 nav{
     display:flex;
-    justify-content:space-between;
     position: sticky;
+    justify-content:space-between;
+    background-color: white;
 }
 nav , nav * {
-    border:solid 1px black;
+    border:solid 1px rgb(0, 0, 0);
 }
 nav h1{
-    margin-left:10px;
+    /* margin-left:10px; */
 }
 nav ul{
     list-style-type:none;
@@ -16,80 +17,121 @@ nav ul{
     display:flex;
 }
 nav li{
-    padding: 10px;
+    /* padding: 10px; */
     margin:0;
 }
 
+nav button{
+    background-color: transparent;
+    border: none;
+    color:cornflowerblue;
+}
 .container *{
     border:solid 1px black;
-    padding: 3px
+    padding: 3px;
 }
-.containter{
-    display: flex;
+.container{
+    background-color: #f2f2f2;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px;
+    width: 100px; */
 }
 
 /*formating the suggestion box*/
-.suggestions{
+.suggestions-section{
     /* justify-content: flex-end; */
     float: right;
+    background-color: white;
 }
 #personal{
     display: flex;
     justify-content: left;
-    padding:10px;
+    /* padding:10px; */
 }
+#personal img{
+    border-radius: 50%;
+}
+
 .suggestions h3{
-    margin:4px;
+    /* margin:4px; */
 }
 .suggestions ul{
     list-style-type: none;
-    margin-top:4px;
+    /* margin-top:4px; */
 }
-.suggested-accounts{
-    height: 400px;
-    width: 260px;
-}
-#suggestion{
-    height:18%;
+
+.suggestion{
+    /* height:18%;
     width:96%;
     margin:2px;
-    padding:2px;
+    padding:2px; */
     display: flex;
     align-items: center;
 }
 
+.follow-button{
+    background-color: transparent;
+    border: none;
+    color:cornflowerblue;
+}
+
+.suggestion img{
+    border-radius: 50%;
+}
+
 /*formatting story bar*/
 .stories{
-    display: flex;
-    justify-content: flex-start;
-    height:110px;
+    /* display: flex; 
+    justify-content: flex-start; */
+    /* height:110px; */
+    /* float: right; */
+    /* align-self: center; */
+    /* margin: 0 auto; */
+    align-content: left;
+    width: 60%;
+    padding-left: 4vw;
+    background-color: white;
 }
 .stories ul{
+    display: inline-block;
     list-style-type: none;
-    width:100%;
-    height:100px;
-    margin:2px;
+    align-self: center;
+    margin: 0 auto;
+    /* width:100%; */
+    /* height:100px; */
+    /* margin:2px; */
 }
 .stories li{
-    width:75px;
-    height:90px;
+    /* width:75px;
+    height:90px; */
     float: left;
-    padding: 4px;
-    margin:0px 2px;
+    margin: 0 auto;
+    text-align: center;
+    /* padding: 4px;
+    margin:0px 2px; */
 }
 .stories img{
     border-radius: 50%;
-    margin-left:10%;
+    margin:0 auto;
 }
 
 
 
-.posts{
-    margin-top:10px;
-    width:66%;
+.post-section{
+    /* margin-top:10px;
+    width:66%; */
+    /* margin: 0 auto;
+    width: 60%; */
+    align-content: left;
+    width: 60%;
+    padding-left: 4vw;
+}
+
+.post{
+    padding-top: 3vh;
+    background-color: white;
+
 }
 
 .ellipsis{
@@ -105,3 +147,44 @@ nav li{
 .bookmark{
     float: right;
 }
+
+.comment{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.comment-text{
+    width:80%;
+}
+
+.comment-button{
+    background-color: transparent;
+    border: none;
+    color:cornflowerblue;
+    padding-left: 2rem;    
+}
+
+/* MEDIA QUERIES */
+ 
+ /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (max-width: 767px) {
+    .suggestions-section {
+        display: none;
+     }
+
+    .stories{
+        align-content:center;
+        margin: 0 auto;
+        width:60%;
+    }
+
+    .post-section{
+        align-content: center;
+        margin: 0 auto;
+        width:60%;
+    }
+ }

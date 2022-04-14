@@ -12,55 +12,55 @@
         <h1>Photo App</h1>
         <ul>
             <li>Username</li>
-            <li><a href="#logout">Log Out</a></li>
+            <li><button type="button">Sign Out</button></li>
         </ul>
     </nav>
-    <div class="suggestions">
+    <div class="suggestions-section">
         <div id="personal">
             <img src="https://i.picsum.photos/id/570/100/100.jpg?hmac=VEJlDpzGtaEKOeH7vWHGRRiKygz14cXzpiEWWniXfXA">
             <p>Username</p>
         </div>
         <h3>Suggestions for you</h3>
         <ul class="suggested-accounts">
-            <li id="suggestion">
+            <li class="suggestion">
                 <img src="https://i.picsum.photos/id/988/50/50.jpg?hmac=MmanxbBz-aJ-qojZRnErpw9XGUbvHyJptD_wjJigylI">
                 <span>
                     <div>amandahudson</div>
                     <div><i>suggested for you</i></div>
                 </span>
-                <span><button type=button>follow</button></span>
+                <span><button type="button" class="follow-button">follow</button></span>
             </li>
-            <li id="suggestion">
+            <li class="suggestion">
                 <img src="https://i.picsum.photos/id/953/50/50.jpg?hmac=Qvr2U6Q7GwrA5M_a_qKCxs_TVohG9W3ZWQpKRDyTF-o">
                 <span>
                     <div>qthornton</div>
                     <div><i>suggested for you</i></div>
                 </span>
-                <span><button type=button>follow</button></span>
+                <span><button type="button" class="follow-button">follow</button></span>
             </li>
-            <li id="suggestion">
+            <li class="suggestion">
                 <img src="https://i.picsum.photos/id/464/50/50.jpg?hmac=DAKq_VDhnxbPQn3P-9FDnxMKrAIGfq1ID-66yTZYEmY">
                 <span>
                     <div>ynelson</div>
                     <div><i>suggested for you</i></div>
                 </span>
-                <span><button type=button>follow</button></span>
+                <span><button type="button" class="follow-button">follow</button></span>
             </li>
-            <li id="suggestion">
+            <li class="suggestion">
                 <img src="https://i.picsum.photos/id/487/50/50.jpg?hmac=A5MrcuXTspVlSRnhbmWLfnek4SunmYMJ7QN0Q0SCuCE">
                 <span>
                     <div>lauralyons</div>
                     <div><i>suggested for you</i></div>
                 </span>
-                <span><button type=button>follow</button></span>
+                <span><button type="button" class="follow-button">follow</button></span>
             </li>
-            <li id="suggestion">
+            <li class="suggestion">
                 <img src="https://i.picsum.photos/id/260/50/50.jpg?hmac=2ZAzK11vMmRA54BDubcvIqK6WCvYWYu6SalTWDACZ8k">
                 <span>
                     <div>airotciv</div>
                     <div><i>suggested for you</i></div>
                 </span>
-                <span><button type=button>follow</button></span>
+                <span><button type="button" class="follow-button">follow</button></span>
             </li>
         </ul>
 
@@ -89,45 +89,188 @@
             </li>
         </ul>
     </div>
-    <div class="posts">
+    <div class="post-section">
         <!-- POST 1 -->
-        <div class="post-head">
-            <span>Username</span>
-            <i class="fas fa-ellipsis-h ellipsis"></i>
-        </div>
-        <div>
-            <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
-        </div>
-        <div class="icons">
-                <i class="far fa-heart"></i>
-                <i class="far fa-comment"></i>
-                <i class="far fa-paper-plane"></i>
-                <i class="far fa-bookmark bookmark"></i>
-        </div>
-        <div>
-            <b>2 Likes</b>
-        </div>
-        <div class="caption">
-            <span><b>Username</b></span>
-            <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
-            <a href ="" class="more">More</a>
-        </div>
-        <div class="comment-1">
-            <span><b>lizzie</b> very good</span>
-        </div>
-        <div class="comment-2">
-            <span><b>vanek</b> not bad</span>
-        </div>
-        <div class="comment">
-            <i class="far fa-smile"></i>
-            <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        <div class="post">
+            <div class="post-head">
+                <span>Username</span>
+                <i class="fas fa-ellipsis-h ellipsis"></i>
+            </div>
+            <div>
+                <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
+            </div>
+            <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-bookmark bookmark"></i>
+            </div>
+            <div>
+                <b>2 Likes</b>
+            </div>
+            <div class="caption">
+                <span><b>Username</b></span>
+                <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
+                <a href ="" class="more">More</a>
+            </div>
+            <div>
+                <span><b>lizzie</b> very good</span>
+            </div>
+            <div>
+                <span><b>vanek</b> not bad</span>
+            </div>
+            <div><i>1 DAY AGO</i></div>
+            <div class="comment">
+                <i class="far fa-smile"></i>
+                <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+                <button type="button" class="comment-button">Post</button>
+            </div>
         </div>
         <!-- POST 2 -->
+        <div class="post">
+            <div class="post-head">
+                <span>Username</span>
+                <i class="fas fa-ellipsis-h ellipsis"></i>
+            </div>
+            <div>
+                <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
+            </div>
+            <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-bookmark bookmark"></i>
+            </div>
+            <div>
+                <b>2 Likes</b>
+            </div>
+            <div class="caption">
+                <span><b>Username</b></span>
+                <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
+                <a href ="" class="more">More</a>
+            </div>
+            <div>
+                <span><b>lizzie</b> very good</span>
+            </div>
+            <div>
+                <span><b>vanek</b> not bad</span>
+            </div>
+            <div><i>1 DAY AGO</i></div>
+            <div class="comment">
+                <i class="far fa-smile"></i>
+                <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+                <button type="button" class="comment-button">Post</button>
+            </div>
+        </div>
         <!-- POST 3 -->
+        <div class="post">
+            <div class="post-head">
+                <span>Username</span>
+                <i class="fas fa-ellipsis-h ellipsis"></i>
+            </div>
+            <div>
+                <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
+            </div>
+            <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-bookmark bookmark"></i>
+            </div>
+            <div>
+                <b>2 Likes</b>
+            </div>
+            <div class="caption">
+                <span><b>Username</b></span>
+                <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
+                <a href ="" class="more">More</a>
+            </div>
+            <div>
+                <span><b>lizzie</b> very good</span>
+            </div>
+            <div>
+                <span><b>vanek</b> not bad</span>
+            </div>
+            <div><i>1 DAY AGO</i></div>
+            <div class="comment">
+                <i class="far fa-smile"></i>
+                <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+                <button type="button" class="comment-button">Post</button>
+            </div>
+        </div>
         <!-- POST 4 -->
+        <div class="post">
+            <div class="post-head">
+                <span>Username</span>
+                <i class="fas fa-ellipsis-h ellipsis"></i>
+            </div>
+            <div>
+                <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
+            </div>
+            <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-bookmark bookmark"></i>
+            </div>
+            <div>
+                <b>2 Likes</b>
+            </div>
+            <div class="caption">
+                <span><b>Username</b></span>
+                <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
+                <a href ="" class="more">More</a>
+            </div>
+            <div>
+                <span><b>lizzie</b> very good</span>
+            </div>
+            <div>
+                <span><b>vanek</b> not bad</span>
+            </div>
+            <div><i>1 DAY AGO</i></div>
+            <div class="comment">
+                <i class="far fa-smile"></i>
+                <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+                <button type="button" class="comment-button">Post</button>
+            </div>
+        </div>
         <!-- POST 5 -->
-
+        <div class="post">
+            <div class="post-head">
+                <span>Username</span>
+                <i class="fas fa-ellipsis-h ellipsis"></i>
+            </div>
+            <div>
+                <img src="https://i.picsum.photos/id/39/300/200.jpg?hmac=YXzEPNgu1bNYap1RvJdbn7PBaRd7lTAkoz1dQ24Mwbo" class="post-img">
+            </div>
+            <div class="icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                    <i class="far fa-bookmark bookmark"></i>
+            </div>
+            <div>
+                <b>2 Likes</b>
+            </div>
+            <div class="caption">
+                <span><b>Username</b></span>
+                <span>The first image illustrates how each card should look. The second image illustrates one way of nesting HTML elements to produce the desired effect (each HTML element is outlined). Feel free...</span>
+                <a href ="" class="more">More</a>
+            </div>
+            <div>
+                <span><b>lizzie</b> very good</span>
+            </div>
+            <div>
+                <span><b>vanek</b> not bad</span>
+            </div>
+            <div><i>1 DAY AGO</i></div>
+            <div class="comment">
+                <i class="far fa-smile"></i>
+                <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+                <button type="button" class="comment-button">Post</button>
+            </div>
+        </div>
+    </div>
     </div>
     <main>
 
