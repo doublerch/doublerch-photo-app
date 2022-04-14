@@ -2,6 +2,7 @@
 nav{
     display:flex;
     position: sticky;
+    top:0;
     justify-content:space-between;
     background-color: white;
 }
@@ -43,6 +44,8 @@ nav button{
     /* justify-content: flex-end; */
     float: right;
     background-color: white;
+    position: sticky;
+    top: 11vh;
 }
 #personal{
     display: flex;
