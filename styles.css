@@ -6,11 +6,13 @@ nav{
     justify-content:space-between;
     background-color: white;
 }
-nav , nav * {
+/* nav , nav * {
     border:solid 1px rgb(0, 0, 0);
-}
-nav h1{
-    /* margin-left:10px; */
+} */
+nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav ul{
     list-style-type:none;
@@ -25,18 +27,20 @@ nav li{
 nav button{
     background-color: transparent;
     border: none;
-    color:cornflowerblue;
+    color:darkblue;
 }
 
-.username{
-    padding: 0;
-    margin:0;
-}
+
 
 .container *{
-    border:solid 1px black;
+    /* border:solid 1px black; */
     padding: 3px;
 }
+/* Fonts */
+.container * :not(i):not(h1):not(h2):not(h3):not(h4){
+    font-family: Arial, sans-serif;
+}
+
 .container{
     background-color: #f2f2f2;
     /* display: flex;
@@ -45,11 +49,17 @@ nav button{
     width: 100px; */
 }
 
+h1, h2, h3, h4, .username{
+    padding: 0;
+    margin:0;
+    font-family: 'Comfortaa', sans-serif;
+}
+
 /*formating the suggestion box*/
 .suggestions-section{
     /* justify-content: flex-end; */
     float: right;
-    background-color: white;
+    /* background-color: white; */
     position: sticky;
     top: 11vh;
 }
@@ -58,13 +68,21 @@ nav button{
     justify-content: left;
     /* padding:10px; */
 }
+
+#personal .username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #personal img{
     border-radius: 50%;
 }
 
-.suggestions h3{
-    /* margin:4px; */
+.suggestions-section i{
+    opacity: 70%;
 }
+
 .suggestions ul{
     list-style-type: none;
     /* margin-top:4px; */
@@ -83,7 +101,7 @@ nav button{
 .follow-button{
     background-color: transparent;
     border: none;
-    color:cornflowerblue;
+    color:darkblue;
 }
 
 .suggestion img{
@@ -100,15 +118,17 @@ nav button{
     /* margin: 0 auto; */
     align-content: left;
     width: 60%;
+    padding-top: 3vh;
     padding-left: 4vw;
-    background-color: white;
+    /* background-color: white; */
 }
 .stories ul{
     display: inline-block;
     list-style-type: none;
     align-self: center;
     margin: 0 auto;
-    /* width:100%; */
+    background-color: white;
+    width:99%;
     /* height:100px; */
     /* margin:2px; */
 }
@@ -138,17 +158,21 @@ nav button{
     padding-left: 4vw;
 }
 
-.post-section .username{
-    width:80%;
+.post-section .username, .ellipsis{
+    display: inline;
 }
-/* .post-section .fa-ellipsis-h{
-    display:inline-block;
-} */
 
 .post{
-    padding-top: 3vh;
-    background-color: white;
+    border:#f2f2f2;
+    border-style: solid;
+    border-width: 1em 0em;
+    background: white;
 
+}
+
+.more:link, .more:visited, .more:active, .more:hover{
+    text-decoration: none;
+    color: darkblue;
 }
 
 .ellipsis{
@@ -170,6 +194,9 @@ nav button{
     justify-content:flex-start;
 }
 
+.post .username, .comment-text{
+    display:inline;
+}
 .comment-text{
     width:80%;
 }
@@ -177,7 +204,7 @@ nav button{
 .comment-button{
     background-color: transparent;
     border: none;
-    color:cornflowerblue;
+    color:darkblue;
     padding-left: 2rem;    
 }
 
@@ -203,5 +230,9 @@ nav button{
         align-content: center;
         margin: 0 auto;
         width:60%;
+    }
+
+    .post{
+        border-width: 0.5em;
     }
  }
