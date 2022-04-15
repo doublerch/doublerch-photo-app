@@ -126,8 +126,6 @@ h1, h2, h3, h4, .username{
     display: inline-block;
     list-style-type: none;
     align-self: center;
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     background-color: white;
     width:99%;
