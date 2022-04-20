@@ -3,7 +3,7 @@
         <ul>
             {% for story in stories %}
             <li>
-                <img src="{{story.user.profile_url}}">
+                <img src="{{story.user.profile_url}}" alt="{{story.user.image_id}}">
                 <div>{{story.user.username}}</div>
             </li>
             {% endfor %}
