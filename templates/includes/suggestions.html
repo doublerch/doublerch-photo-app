@@ -1,49 +1,19 @@
 <div class="suggestions-section">
         <div id="personal">
-            <img src="https://i.picsum.photos/id/570/100/100.jpg?hmac=VEJlDpzGtaEKOeH7vWHGRRiKygz14cXzpiEWWniXfXA">
-            <h4 class="username">Yisong</h4>
+            <img src="{{user.profile_url}}">
+            <h4 class="username">{{user.username}}</h4>
         </div>
         <h3>Suggestions for you</h3>
         <ul class="suggested-accounts">
+            {% for suggested_user in suggestions %}
             <li class="suggestion">
-                <img src="https://i.picsum.photos/id/988/50/50.jpg?hmac=MmanxbBz-aJ-qojZRnErpw9XGUbvHyJptD_wjJigylI">
+                <img src="{{suggested_user.profile_url}}">
                 <span>
-                    <div><h4 class="username">amandahudson</h4></div>
+                    <div><h4 class="username">{{suggested_user.username}}</h4></div>
                     <div><i>suggested for you</i></div>
                 </span>
                 <span><button type="button" class="follow-button">follow</button></span>
             </li>
-            <li class="suggestion">
-                <img src="https://i.picsum.photos/id/953/50/50.jpg?hmac=Qvr2U6Q7GwrA5M_a_qKCxs_TVohG9W3ZWQpKRDyTF-o">
-                <span>
-                    <div><h4 class="username">qthornton</h4></div>
-                    <div><i>suggested for you</i></div>
-                </span>
-                <span><button type="button" class="follow-button">follow</button></span>
-            </li>
-            <li class="suggestion">
-                <img src="https://i.picsum.photos/id/464/50/50.jpg?hmac=DAKq_VDhnxbPQn3P-9FDnxMKrAIGfq1ID-66yTZYEmY">
-                <span>
-                    <div><h4 class="username">ynelson</h4></div>
-                    <div><i>suggested for you</i></div>
-                </span>
-                <span><button type="button" class="follow-button">follow</button></span>
-            </li>
-            <li class="suggestion">
-                <img src="https://i.picsum.photos/id/487/50/50.jpg?hmac=A5MrcuXTspVlSRnhbmWLfnek4SunmYMJ7QN0Q0SCuCE">
-                <span>
-                    <div><h4 class="username">lauralyons</h4></div>
-                    <div><i>suggested for you</i></div>
-                </span>
-                <span><button type="button" class="follow-button">follow</button></span>
-            </li>
-            <li class="suggestion">
-                <img src="https://i.picsum.photos/id/260/50/50.jpg?hmac=2ZAzK11vMmRA54BDubcvIqK6WCvYWYu6SalTWDACZ8k">
-                <span>
-                    <div><h4 class="username">airotciv</h4></div>
-                    <div><i>suggested for you</i></div>
-                </span>
-                <span><button type="button" class="follow-button">follow</button></span>
-            </li>
+            {% endfor %}
         </ul>
     </div>
