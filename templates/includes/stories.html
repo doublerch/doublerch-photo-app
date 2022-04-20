@@ -1,25 +1,11 @@
 
     <div class="stories">
         <ul>
+            {% for story in stories %}
             <li>
-                <img src="https://i.picsum.photos/id/988/50/50.jpg?hmac=MmanxbBz-aJ-qojZRnErpw9XGUbvHyJptD_wjJigylI">
-                <div>gouldjennifer</div>
+                <img src="{{story.user.profile_url}}">
+                <div>{{story.user.username}}</div>
             </li>
-            <li>
-                <img src="https://i.picsum.photos/id/953/50/50.jpg?hmac=Qvr2U6Q7GwrA5M_a_qKCxs_TVohG9W3ZWQpKRDyTF-o">
-                <div>matthew16</div>
-            </li>
-            <li>
-                <img src="https://i.picsum.photos/id/464/50/50.jpg?hmac=DAKq_VDhnxbPQn3P-9FDnxMKrAIGfq1ID-66yTZYEmY">
-                <div>sanchez</div>
-            </li>
-            <li>
-                <img src="https://i.picsum.photos/id/487/50/50.jpg?hmac=A5MrcuXTspVlSRnhbmWLfnek4SunmYMJ7QN0Q0SCuCE">
-                <div>gloria</div>
-            </li>
-            <li>
-                <img src="https://i.picsum.photos/id/260/50/50.jpg?hmac=2ZAzK11vMmRA54BDubcvIqK6WCvYWYu6SalTWDACZ8k">
-                <div>jwright</div>
-            </li>
+            {% endfor %}
         </ul>
     </div>
