@@ -6,7 +6,7 @@
             <i class="fas fa-ellipsis-h ellipsis"></i>
         </div>
         <div>
-            <img src="{{post.image_url}}" class="post-img" alt="{{post.time_posted}}">
+            <img src="{{post.image_url}}" class="post-img">
         </div>
         <div class="icons">
                 <i class="far fa-heart"></i>
@@ -15,7 +15,7 @@
                 <i class="far fa-bookmark bookmark"></i>
         </div>
         <div>
-            <b>{{post.likes}}</b>
+            <b>{{post.likes}} likes</b>
         </div>
         <div class="caption">
             <h4 class="username">{{post.user.username}}</h4>
@@ -36,7 +36,7 @@
         <div><i>{{post.display_time}}</i></div>
         <div class="comment">
             <i class="far fa-smile"></i>
-             <textarea type="text" class="comment-text" placeholder="Write a comment"></textarea>
+            <textarea type="text" class="cfomment-text" placeholder="Write a comment"></textarea>
             <button type="button" class="comment-button">Post</button>
         </div>
     </div>
