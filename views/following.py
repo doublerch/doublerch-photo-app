@@ -2,6 +2,8 @@ from flask import Response, request
 from flask_restful import Resource
 from models import Following, User, db
 import json
+from views import get_authorized_user_ids
+from sqlalchemy import and_
 
 def get_path():
     return request.host_url + 'api/posts/'
@@ -12,7 +14,11 @@ class FollowingListEndpoint(Resource):
     
     def get(self):
         # return all of the "following" records that the current user is following
-        return Response(json.dumps([]), mimetype="application/json", status=200)
+        authorized_users = get_authorized_user_ids(self.current_user)
+        following = Following.query.filter(and_(Following.user_id==self.current_user.id, Following.user_id.in_(authorized_users))).all()
+        data = [follow.to_dict_following() for follow in following] 
+
+        return Response(json.dumps(data), mimetype="application/json", status=200)
 
     def post(self):
         # create a new "following" record based on the data posted in the body 
