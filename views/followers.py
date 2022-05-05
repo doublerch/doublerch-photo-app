@@ -19,8 +19,8 @@ class FollowerListEndpoint(Resource):
         '''
         authorized_users = get_authorized_user_ids(self.current_user)
         followers = Following.query.filter(Following.following_id == self.current_user.id).all()
-        data = []
-        #check duplicates
+        # data = []
+        #Need to check duplicates and authorized users?
         # existing_follower_ids = []
         # for follower in followers:
         #     if follower.id in authorized_users:
