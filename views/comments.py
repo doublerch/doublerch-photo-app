@@ -21,8 +21,18 @@ class CommentDetailEndpoint(Resource):
   
     def delete(self, id):
         # delete "Comment" record where "id"=id
-        print(id)
-        return Response(json.dumps({}), mimetype="application/json", status=200)
+        comment = Comment.query.get(id)
+        if not comment:
+            return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
+            # return Response(json.dumps({"message":  "invalid id"}), mimetype="application/json", status=404)
+
+        if comment.user_id != self.current_user.id:
+            return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
+
+
+        Post.query.filter_by(id=id).delete()
+        db.session.commit()
+        return Response(json.dumps({"message":  "Post id={0} successfully deleted".format(id)}), mimetype="application/json", status=200)
 
 
 def initialize_routes(api):
