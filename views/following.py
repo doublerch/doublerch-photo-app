@@ -25,31 +25,21 @@ class FollowingListEndpoint(Resource):
         # create a new "following" record based on the data posted in the body 
         body = request.get_json()
         try:
-            uid = int(body.get('user_id'))
+            following_id = int(body.get('user_id'))
         except:
             return Response(json.dumps({'message': 'User id must be int'}), mimetype="application/json",status=400)
         # if not body.get('user_id') or not can_view_post(body.get('post_id'), self.current_user):
 
-        authorized_users = get_authorized_user_ids(self.current_user)
-        if body.get('user_id') in authorized_users:
+        following = Following.query.filter_by(user_id = self.current_user.id).filter_by(following_id=following_id).all()
+        if following:
             return Response(json.dumps({'message': 'already following user'}), mimetype="application/json", status=400)
 
-        if not body.get('user_id') or not can_view_post(body.get('post_id'), self.current_user) and body.get('user_id') != self.current_user.id:
-            return Response(json.dumps({'message': 'user not found'}), mimetype="application/json", status=404)
+        user_exist = User.query.get(following_id)
+        if not user_exist:
+            return Response(json.dumps({"message": "user does not exist"}), mimetype="application/json", status=404)
 
-        # following = Following.query.filter(Following.user_id == self.current_user.id)
-        # following = Following.query.filter(and_(Following.user_id==self.current_user.id, Following.user_id.in_(authorized_users))).all()
-        # already_followed = []
-        # for follow in following:
-        #     already_followed.append(follow.following.id)
-        #     if follow.following.id in already_followed:
-        #         return Response(json.dumps({'message': 'already following user'}), mimetype="application/json", status=400)
+        follow = Following(user_id = self.current_user.id, following_id = following_id)
 
-
-        follow = Following(
-            following_id = body.get('following_id'), 
-            user_id = self.current_user.id
-        )
         db.session.add(follow)
         db.session.commit()
         return Response(json.dumps(follow.to_dict_following()), mimetype="application/json", status=201)
@@ -60,7 +50,18 @@ class FollowingDetailEndpoint(Resource):
     
     def delete(self, id):
         # delete "following" record where "id"=id
-        print(id)
+        following = Following.query.get(id)
+        if not following:
+            return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
+            # return Response(json.dumps({"message":  "invalid id"}), mimetype="application/json", status=404)
+
+        if following.user_id != self.current_user.id:
+            return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
+
+
+        Following.query.filter_by(id=id).delete()
+        db.session.commit()
+        return Response(json.dumps({"message":  "Post id={0} successfully deleted".format(id)}), mimetype="application/json", status=200)
         return Response(json.dumps({}), mimetype="application/json", status=200)
 
 
