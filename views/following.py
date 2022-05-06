@@ -62,8 +62,6 @@ class FollowingDetailEndpoint(Resource):
         Following.query.filter_by(id=id).delete()
         db.session.commit()
         return Response(json.dumps({"message":  "Post id={0} successfully deleted".format(id)}), mimetype="application/json", status=200)
-        return Response(json.dumps({}), mimetype="application/json", status=200)
-
 
 
 
